@@ -1,9 +1,12 @@
 let floatingElement = document.querySelector('.floating-element');
 
-floatingElement.addEventListener('mouseover', function() {
-    floatingElement.style.transform = 'translateY(-10px)';
-});
+let position = 0;
 
-floatingElement.addEventListener('mouseout', function() {
-    floatingElement.style.transform = 'translateY(0)';
-});
+setInterval(function() {
+    if (position === 0) {
+        position = -10;
+    } else {
+        position = 0;
+    }
+    floatingElement.style.transform = 'translateY(' + position + 'px)';
+}, 1000);
