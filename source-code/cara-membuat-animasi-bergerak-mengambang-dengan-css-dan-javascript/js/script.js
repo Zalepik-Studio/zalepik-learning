@@ -1,4 +1,4 @@
-let floatingElement = document.querySelector('.floating-element');
+let floatingAnimation = document.querySelector('.floating-animation');
 
 let position = 0;
 
@@ -8,5 +8,5 @@ setInterval(function() {
     } else {
         position = 0;
     }
-    floatingElement.style.transform = 'translateY(' + position + 'px)';
+    floatingAnimation.style.transform = 'translateY(' + position + 'px)';
 }, 1000);
